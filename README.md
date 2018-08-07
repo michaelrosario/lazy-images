@@ -1,6 +1,15 @@
 # lazy-images
 
-Lazy load images using jQuery 
+Lazy load images using jQuery.
+
+*Parameters:*
+- *class* : required and must be "lazy-image"
+- *data-class* : optional, you can provide your own class
+- *data-image* : the URL of the image
+- *data-alt* : optional, the Alt text for the image
+
+Add a *noscript* tag in case the browser has JavaScript disabled.
+
 
 Example Code:
 -----------------------
