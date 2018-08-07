@@ -17,10 +17,12 @@
     		  	if ($(window).scrollTop()+$(window).height() >= currentClass.offset().top + currentClass.height()/2.5 ) {
     		    	currentClass.find(".lazy-image").each(function(){
     		      		if($.trim($(this).html())==''){
-    		       			var img = $(this).attr('data-image');
-    		        		var alt = $(this).attr('data-alt');
-    		        		var className = $(this).attr('data-class');
-    		        		$(this).hide().html("<img class='"+className+"' alt='"+alt+"' src='"+img+"'/>").fadeIn();
+    		       			var img = $(this).attr('data-image') || '';
+    		        		var alt = $(this).attr('data-alt') || "image "+index;
+    		        		var className = $(this).attr('data-class') || "lazy-image-"+index;
+    		        		if(img){
+                                $(this).hide().html("<img class='"+className+"' alt='"+alt+"' src='"+img+"'/>").fadeIn();
+                            }
     		      		}
     		    	});
     		 	}
