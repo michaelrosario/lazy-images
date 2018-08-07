@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+  <head>
+    <title>Lazy Load Images</title>
+
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+      </script>
+      <script src="./js/lazy-images.min.js"></script>
+
+      <script>
+        $(document).ready(function(){
+          $(".container-name").lazyImages(); 
+        });
+      </script>
+
+      <style>
+        html, body { width: 100%; padding: 0; margin: 0; }
+        #site-wrapper {
+          width: 100%;
+          padding: 50px;
+          box-sizing: border-box;
+        }
+        .container-name {
+          box-sizing: border-box;
+          border: 1px solid #999;
+          min-height: 600px;
+          width: 800px;
+          float: left;
+          border-radius: 10px;
+          padding: 50px;
+          margin: 10px auto;
+        }
+        img {
+          max-width: 600px;
+          height: auto;
+        }
+      </style>
+
+  </head>
+  <body>
+    <div id="site-wrapper">
+      
+      <h1>Lazy Load Images</h1>
+      <p>This is a demo for the lazy load plugin. Make sure the <strong>span</strong> has a class name of <strong>"lazy-images"</strong> </p>
+    
+      <div class="container-name">
+  
+        <span 
+           class="lazy-image" 
+           data-class="your-class" 
+           data-image="https://www.elementoinc.com/assets/work/20151201-screen-noaacrest.png" 
+           data-alt="This is the alt parameter of the image">
+        </span>
+    
+        <noscript>
+          <img class="your-class" src="https://www.elementoinc.com/assets/work/20151201-screen-noaacrest.png" alt="This is the alt parameter of the image" />
+        </noscript>
+      </div>
+      <div class="container-name">
+  
+        <span 
+           class="lazy-image" 
+           data-class="your-class" 
+           data-image="https://www.elementoinc.com/assets/work/esq_thumb.png" 
+           data-alt="This is the alt parameter of the image">
+        </span>
+    
+        <noscript>
+          <img class="your-class" src="https://www.elementoinc.com/assets/work/esq_thumb.png" alt="This is the alt parameter of the image" />
+        </noscript>  
+      </div>
+      <div class="container-name">
+  
+        <span 
+           class="lazy-image" 
+           data-class="your-class" 
+           data-image="https://www.elementoinc.com/assets/work/sds-full_thumb.png" 
+           data-alt="This is the alt parameter of the image">
+        </span>
+    
+        <noscript>
+          <img class="your-class" src="https://www.elementoinc.com/assets/work/sds-full_thumb.png" alt="This is the alt parameter of the image" />
+        </noscript> 
+      </div>
+      <div class="container-name">
+  
+        <span 
+           class="lazy-image" 
+           data-class="your-class" 
+           data-image="https://www.elementoinc.com/assets/work/susan-rabin_1.jpg" 
+           data-alt="This is the alt parameter of the image">
+        </span>
+    
+        <noscript>
+          <img class="your-class" src="https://www.elementoinc.com/assets/work/susan-rabin_1.jpg" alt="This is the alt parameter of the image" />
+        </noscript>
+      </div>
+      <div class="container-name">
+  
+        <span 
+           class="lazy-image" 
+           data-class="your-class" 
+           data-image="https://www.elementoinc.com/assets/work/veriled_1.jpg" 
+           data-alt="This is the alt parameter of the image">
+        </span>
+    
+        <noscript>
+          <img class="your-class" src="https://www.elementoinc.com/assets/work/veriled_1.jpg" alt="This is the alt parameter of the image" />
+        </noscript> 
+      </div>
+    
+    </div>
+  </body>
+</html>
