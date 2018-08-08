@@ -1,6 +1,6 @@
 <!DOCTYPE html>
   <head>
-    <title>Lazy Load Images</title>
+    <title>Lazy Images - Lazy load your images</title>
 
     <script
         src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -42,11 +42,17 @@
   <body>
     <div id="site-wrapper">
       
-      <h1>Lazy Load Images</h1>
+      <h1>Lazy Images</h1>
       <p>This is a demo for the lazy load plugin. Make sure the <strong>span</strong> has a class name of <strong>"lazy-images"</strong> </p>
     
       <div class="container-name">
-  
+        <h5>Multiple images example</h5>
+        <span 
+           class="lazy-image" 
+           data-class="your-class" 
+           data-image="https://www.elementoinc.com/assets/work/20151201-screen-noaacrest.png" 
+           data-alt="This is the alt parameter of the image">
+        </span>
         <span 
            class="lazy-image" 
            data-class="your-class" 
@@ -56,20 +62,26 @@
     
         <noscript>
           <img class="your-class" src="https://www.elementoinc.com/assets/work/20151201-screen-noaacrest.png" alt="This is the alt parameter of the image" />
+          <img class="your-class" src="https://www.elementoinc.com/assets/work/20151201-screen-noaacrest.png" alt="This is the alt parameter of the image" />
         </noscript>
+        
       </div>
       <div class="container-name">
-  
-        <span 
+        <h5>Link example</h5>
+        <a href="https://www.elementoinc.com" 
            class="lazy-image" 
            data-class="your-class" 
            data-image="https://www.elementoinc.com/assets/work/esq_thumb.png" 
            data-alt="This is the alt parameter of the image">
-        </span>
+        </a>
     
         <noscript>
-          <img class="your-class" src="https://www.elementoinc.com/assets/work/esq_thumb.png" alt="This is the alt parameter of the image" />
-        </noscript>  
+          <a href="https://www.elementoinc.com">
+            <img class="your-class" src="https://www.elementoinc.com/assets/work/esq_thumb.png" alt="This is the alt parameter of the image" />
+          </a>
+        </noscript>
+        
+        
       </div>
       <div class="container-name">
   
