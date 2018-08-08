@@ -66,8 +66,8 @@ Example Code:
       </span>
  
       <noscript>
-        <img class="your-class" src="/path-to/image-01.jpg" alt="This is the alt parameter of the image" />
-        <img class="your-class" src="/path-to/image-01.jpg" alt="This is the alt parameter of the image" />
+        <img class="your-class" src="/path-to/image-01.jpg" alt="This is the alt parameter of the image 1" />
+        <img class="your-class" src="/path-to/image-02.jpg" alt="This is the alt parameter of the image 2" />
       </noscript>
 
     </div>
