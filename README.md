@@ -15,16 +15,59 @@ Example Code:
 -----------------------
 
     <div class="container-name">
-  
+      
+      <!-- Simple Example -->
       <span 
         class="lazy-image" 
         data-class="your-class" 
         data-image="/path-to/image.jpg" 
         data-alt="This is the alt parameter of the image">
-     </span>
+      </span>
  
       <noscript>
         <img class="your-class" src="/path-to/image.jpg" alt="This is the alt parameter of the image" />
+      </noscript>
+
+    </div>
+    
+    <div class="container-name">
+      
+      <!-- Link Example -->
+      <a 
+        href="https://www.elementoinc.com"
+        class="lazy-image" 
+        data-class="your-class" 
+        data-image="/path-to/image.jpg" 
+        data-alt="This is the alt parameter of the image">
+      </a>
+ 
+      <noscript>
+        <a href="https://www.elementoinc.com">
+            <img class="your-class" src="/path-to/image.jpg" alt="This is the alt parameter of the image" />
+        </a>
+      </noscript>
+
+    </div>
+    
+    <div class="container-name">
+      
+      <!-- Multiple Images Example -->
+      <span
+        class="lazy-image" 
+        data-class="your-class" 
+        data-image="/path-to/image-01.jpg" 
+        data-alt="This is the alt parameter of the image 1">
+      </span>
+      <span
+        class="lazy-image" 
+        data-class="your-class" 
+        data-image="/path-to/image-02.jpg" 
+        data-alt="This is the alt parameter of the image 2">
+      </span>
+ 
+      <noscript>
+        <img class="your-class" src="/path-to/image-01.jpg" alt="This is the alt parameter of the image" />
+        <img class="your-class" src="/path-to/image-01.jpg" alt="This is the alt parameter of the image" />
       </noscript>
 
     </div>
