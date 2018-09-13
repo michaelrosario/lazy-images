@@ -21,6 +21,7 @@ Example Code:
         class="lazy-image" 
         data-class="your-class" 
         data-image="/path-to/image.jpg" 
+        data-retina="/path-to/image@2x.jpg"
         data-alt="This is the alt parameter of the image">
       </span>
  
@@ -38,6 +39,7 @@ Example Code:
         class="lazy-image" 
         data-class="your-class" 
         data-image="/path-to/image.jpg" 
+        data-retina="/path-to/image@2x.jpg"
         data-alt="This is the alt parameter of the image">
       </a>
  
@@ -55,13 +57,15 @@ Example Code:
       <span
         class="lazy-image" 
         data-class="your-class" 
-        data-image="/path-to/image-01.jpg" 
+        data-image="/path-to/image-01.jpg"
+        data-retina="/path-to/image@2x.jpg"
         data-alt="This is the alt parameter of the image 1">
       </span>
       <span
         class="lazy-image" 
         data-class="your-class" 
-        data-image="/path-to/image-02.jpg" 
+        data-image="/path-to/image-02.jpg"
+        data-retina="/path-to/image@2x.jpg"
         data-alt="This is the alt parameter of the image 2">
       </span>
  
