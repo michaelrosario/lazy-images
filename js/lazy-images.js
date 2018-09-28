@@ -21,18 +21,22 @@
     		    	currentClass.find(".lazy-image").each(function(){
     		      		if($.trim($(this).html())==''){
     		       			var img = $(this).attr('data-image') || '';
+                            var style = $(this).attr('data-style') || '';
                             
-                            if (pixelRatio > 1) {
+                            if (pixelRatio > 1 || ($(window).width() <= 768 && $(window).width() > 311)) {
                 
                                 var retinaImg = $(this).attr('data-retina') || '';
                                 if(retinaImg){ img = retinaImg; }
+                                console.log("Serving retina image "+ img);
 
                             }
 
     		        		var alt = $(this).attr('data-alt') || "image "+index;
     		        		var className = $(this).attr('data-class') || "lazy-image-"+index;
     		        		if(img){
-                                $(this).hide().html("<img class='"+className+"' alt='"+alt+"' src='"+img+"'/>").fadeIn();
+                                $(this).hide();
+                                if(style){ $(this).attr("style",style); }
+                                $(this).html("<img class='"+className+"' alt='"+alt+"' src='"+img+"'/>").fadeIn();
                             }
     		      		}
     		    	});
