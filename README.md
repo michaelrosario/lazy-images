@@ -8,6 +8,7 @@ Lazy load images using jQuery.
 - *data-image* : the URL of the image
 - *data-retina* : optional, the URL of the 2x image
 - *data-alt* : optional, the Alt text for the image
+- *data-style* : optional, this adds inline css to your lazy-image object
 
 Add a *noscript* tag in case the browser has JavaScript disabled.
 
@@ -21,6 +22,7 @@ Example Code:
       <span 
         class="lazy-image" 
         data-class="your-class" 
+        data-style="border: 1px solid #000"
         data-image="/path-to/image.jpg" 
         data-retina="/path-to/image@2x.jpg"
         data-alt="This is the alt parameter of the image">
