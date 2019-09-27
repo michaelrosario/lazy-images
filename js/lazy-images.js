@@ -20,7 +20,7 @@
 	
     			var currentClass = $(this);
 	
-    		  	if ($(window).scrollTop()+$(window).height() >= currentClass.offset().top + currentClass.height()/2.5 ) {
+    		  	if ($(window).scrollTop()+$(window).height() >= currentClass.offset().top + currentClass.height()/9.5 ) {
 					currentClass
 						.addClass("loaded")
 						.find(".lazy-image")
