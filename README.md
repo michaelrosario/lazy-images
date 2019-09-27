@@ -88,3 +88,4 @@ Example Code:
 
 NOTES:
 - The wrapper gets a class "loaded" when the lazy-images are in view
+- Each lazy loaded image gets a class "lazy-loaded" 
