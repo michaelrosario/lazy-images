@@ -85,3 +85,6 @@ Example Code:
       });
     </script>
 
+
+NOTES:
+- The wrapper gets a class "loaded" when the lazy-images are in view
