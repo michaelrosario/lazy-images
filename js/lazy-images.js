@@ -9,7 +9,7 @@
  
     $.fn.lazyImages = function() {
 
-    	var currentContainer = this;
+    	let currentContainer = this;
 
         // Set pixelRatio to 1 if the browser doesn't offer it up.
         var pixelRatio = !!window.devicePixelRatio ? window.devicePixelRatio : 1;
@@ -18,20 +18,19 @@
 
     		currentContainer.each(function(index){
 	
-    			var currentClass = $(this);
+                let currentClass = $(this);
 	
-    		  	if ($(window).scrollTop()+$(window).height() >= currentClass.offset().top + currentClass.height()/9.5 && currentClass.hasClass("loaded")) {
+    		  	if ($(window).scrollTop()+$(window).height() >= currentClass.offset().top + currentClass.height()/9.5 && !currentClass.hasClass("loaded")) {
 					
-					
-					let containerStyle = currentClass.attr("data-style");
-					if(containerStyle){
-						currentClass.attr("style",containerStyle);
-					}
-					
-					currentClass
-						.addClass("loaded")
+                    let containerStyle = currentClass.attr("data-style") || "";
+                    if(containerStyle != ""){
+                        currentClass.attr("style",containerStyle);
+                    }
+
+                    currentClass
+                        .addClass("loaded")
 						.find(".lazy-image")
-						.addClass(".lazy-loaded")
+                        .addClass("lazy-loaded")
 						.each(function(){
     		      		
     		       			var img = $(this).attr('data-image') || '';
