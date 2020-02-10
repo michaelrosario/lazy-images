@@ -20,13 +20,13 @@
 	
     			var currentClass = $(this);
 	
-    		  	if ($(window).scrollTop()+$(window).height() >= currentClass.offset().top + currentClass.height()/9.5 ) {
+    		  	if ($(window).scrollTop()+$(window).height() >= currentClass.offset().top + currentClass.height()/9.5 && currentClass.hasClass("loaded")) {
 					currentClass
 						.addClass("loaded")
 						.find(".lazy-image")
 						.addClass(".lazy-loaded")
 						.each(function(){
-    		      		if($.trim($(this).html())==''){
+    		      		
     		       			var img = $(this).attr('data-image') || '';
                             var style = $(this).attr('data-style') || '';
                             
@@ -34,7 +34,6 @@
                 
                                 var retinaImg = $(this).attr('data-retina') || '';
                                 if(retinaImg){ img = retinaImg; }
-                                console.log("Serving retina image "+ img);
 
                             }
 
@@ -45,7 +44,7 @@
                                 if(style){ $(this).attr("style",style); }
                                 $(this).html("<img class='"+className+"' alt='"+alt+"' src='"+img+"'/>").fadeIn();
                             }
-    		      		}
+    	
     		    	});
     		 	}
     		});
