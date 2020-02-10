@@ -14,13 +14,20 @@
         // Set pixelRatio to 1 if the browser doesn't offer it up.
         var pixelRatio = !!window.devicePixelRatio ? window.devicePixelRatio : 1;
 
-    	function lazyImageLoad() {
+    	const lazyImageLoad = () => {
 
     		currentContainer.each(function(index){
 	
     			var currentClass = $(this);
 	
     		  	if ($(window).scrollTop()+$(window).height() >= currentClass.offset().top + currentClass.height()/9.5 && currentClass.hasClass("loaded")) {
+					
+					
+					let containerStyle = currentClass.attr("data-style");
+					if(containerStyle){
+						currentClass.attr("style",containerStyle);
+					}
+					
 					currentClass
 						.addClass("loaded")
 						.find(".lazy-image")
